@@ -1,4 +1,4 @@
-module github.com/Marga/BookApp
+module github.com/Taukom/Book-App
 
 go 1.24.2
 
