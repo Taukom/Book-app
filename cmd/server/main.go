@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/Taukom/Book-App/internal/db"
+	"github.com/Taukom/Book-App/pkg/db"
 
 	"github.com/joho/godotenv"
 )
