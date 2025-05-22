@@ -1,6 +1,5 @@
 # Go build output
 /bin/
-/pkg/
 *.exe
 
 # Environment files

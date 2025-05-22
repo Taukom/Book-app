@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/Taukom/Book-App/pkg/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -24,6 +25,15 @@ func Init() {
 	database, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatalf("Failed to connect to DB: %v", err)
+	} else {
+		log.Println("Connetcted to DB succses.")
+	}
+
+	err = database.AutoMigrate(&models.Book{})
+	if err != nil {
+		log.Fatalf("Migration failed: %v", err)
+	} else {
+		log.Println("Migration to DB succses.")
 	}
 
 	DB = database

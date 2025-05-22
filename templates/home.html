@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Библиотека</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Каталог книг</h1>
+    <div class="actions">
+        <a href="/random" class="btn">Случайная книга</a>
+        <a href="/add-book" class="btn">Добавить книгу</a>
+    </div>
+    <div class="books">
+        {{range .Books}}
+        <div class="book">
+            <img src="{{.CoverURL}}" alt="Обложка">
+            <h3>{{.Title}}</h3>
+            <p>{{.Description}}</p>
+            <p class="author">Добавил: {{.Author}}</p>
+        </div>
+        {{end}}
+    </div>
+</div>
+</body>
+</html>
